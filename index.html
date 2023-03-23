@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
         <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,19 +25,24 @@
                     <div class="logo">
                         <img src="./img/logo.png" alt="logo">
                     </div>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#aboutUs">About Us</a></li>
-                        <li class="nav-phone"><img src="./img/call_icon.svg" alt="icon"> 9311444719</li>
-                        <!-- <li><a href="#contactUs"class="nav-btn btn-pri">Contact Us</a></li> -->
-                    </ul>
+                        <ul class="nav-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#aboutUs">About Us</a></li>
+                            <li class="nav-phone"><img src="./img/call_icon.svg" alt="icon"><a class = 'tel' href="tel : 9311444719">9311444719</a></li>
+                            <!-- <li><a href="#contactUs"class="nav-btn btn-pri">Contact Us</a></li> -->
+                        </ul>
+                        <div class="burger">
+                            <div class="lin1"></div>
+                            <div class="lin2"></div>
+                            <div class="lin3"></div>
+                        </div>
                 </nav>
             </div>
         </header>
         <main>
             <section class="hero">
                 <a href="https://api.whatsapp.com/send?phone=9311444719" class="fixed right-8 left-auto whatsapp-logo">
-                    <div class="whatsp-style"><img src="./img/whatsapp.gif" alt=""></div></a>
+                    <div class="whatsp-style"><img src="./img/whatsapp.gif" alt="icon"></div></a>
                 <div class="container">
                     <h1 class="hero-intro">Paras sco 114</h1>
                     <div class="container__wrapper">
@@ -233,11 +241,11 @@
                                     <input required id="name" type="text" placeholder="Full name">
                                 </div>
                                 <div class="phone-label">
-                                    <label for="phone">Phone Number</label>.
+                                    <label for="phone">Phone Number</label>
                                     <input required id="phone" type="tel" name="phone"placeholder='+91'>
                                 </div>
                                     <div class="email-label">
-                                        <label for="phone">Email</label>.
+                                        <label for="phone">Email</label>
                                         <input required type="email" id="userEmail"placeholder='email'>
                                     </div>
                                 <button class="btn-submit btn-accent" type="submit">Contact</button>
@@ -266,18 +274,18 @@
                     <p class="contact-para">Let's talk about Love to hear from you!</p>
                     <div class="contact-split">
                         <div class="contact-form">
-                            <form onsubmit="sendEmail(); reset(); return false;">
+                            <form onsubmit="contactEmail(); reset(); return false;">
                                 <div>
                                     <label for="name">Full Name</label>
-                                    <input required id="name" type="text" placeholder="Full name">
+                                    <input required id="cName" type="text" placeholder="Full name">
                                 </div>
                                 <div class="phone-label">
-                                    <label for="phone">Phone Number</label>.
-                                    <input required id="phone" type="tel" name="phone"placeholder='+91'>
+                                    <label for="phone">Phone Number</label>
+                                    <input required id="cPhone" type="tel" name="phone"placeholder='+91'>
                                 </div>
                                     <div class="email-label">
-                                        <label for="phone">Email</label>.
-                                        <input required type="email" id="userEmail"placeholder='email'>
+                                        <label for="phone">Email</label>
+                                        <input required type="email" id="cEmail"placeholder='email'>
                                     </div>
                                 <button class="btn-submit btn-accent" type="submit">Contact</button>
                             </form>
