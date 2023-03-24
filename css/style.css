@@ -990,3 +990,9 @@ footer{
 .modal-content form label{
         color: #282A2E;
 }
+
+
+.btn-cards:hover{
+    border: 2px solid #1bcebcba;
+    color: #5A4FF3;
+ }

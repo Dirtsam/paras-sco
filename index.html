@@ -31,7 +31,7 @@
                         <ul class="nav-links">
                             <li><a href="#">Home</a></li>
                             <li><a href="#aboutUs">About Us</a></li>
-                            <li class="nav-phone"><img src="./img/call_icon.svg" alt="icon"><a class = 'tel' href="tel:9311444719">9311444719</a></li>
+                            <li class="nav-phone"><img src="./img/call_icon.svg" alt="icon" class="red"><a class = 'tel' href="tel:9311444719">9311444719</a></li>
                             <!-- <li><a href="#contactUs"class="nav-btn btn-pri">Contact Us</a></li> -->
                         </ul>
                         <div class="burger">
@@ -53,7 +53,7 @@
                     <p>A better approach to invest your money in land or SCO plots "With first time in Gurgaon Exclusive SCO design project ".</p>                   
                     <form onsubmit="sendNum(); reset(); return false;">
                         <label for="contact">
-                            <input type="tel" placeholder="+91" class="phoneNum" id="contactNum">
+                            <input type="tel" placeholder="+91" class="phoneNum" id="contactNum" required>
                         </label>
                         <button class="hero-btn btn-pri" type="submit">Let's talk</button>
                     </form>
@@ -94,8 +94,38 @@
                                     <li>Type - 1</li>
                                 </ul> -->
                                 <h2 class="sizes">104sq.yrd.</h2>
-                                <p class="pro-type">The total numbers of plots in 104sq.yrd. are X</p>
-                                <a href="#" class="btn btn-cards">More details</a>
+                                <p class="pro-type">The total number of plots in 104sq.yrd. are X</p>
+                                <a href="#" id="myBtn" class="btn btn-cards popupBtn">More details</a>
+                                <!-- Popup modal -->
+                                    <!-- Trigger/Open The Modal -->
+                    <!-- <button id="myBtn" class="popupBtn">Download Brochure</button> -->
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="contact-form">
+                                <form onsubmit="sendEmail(); reset(); return false;">
+                                    <div>
+                                        <label for="name">Full Name</label>
+                                        <input required id="name" type="text" placeholder="Full name">
+                                    </div>
+                                    <div class="phone-label">
+                                        <label for="phone">Phone Number</label>
+                                        <input required id="phone" type="tel" name="phone"placeholder='+91'>
+                                    </div>
+                                        <div class="email-label">
+                                            <label for="phone">Email</label>
+                                            <input required type="email" id="userEmail"placeholder='email'>
+                                        </div>
+                                    <button class="btn-submit btn-accent" type="submit">Contact</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
                             </div>
                         </div>
                         <div>
@@ -105,7 +135,7 @@
                                 . type-2
                                 </p> -->
                                 <h2 class="sizes">129sq.yrd.</h2>
-                                <p class="pro-type">The total numbers of plots in 129sq.yrd. are Y</p>
+                                <p class="pro-type">The total number of plots in 129sq.yrd. are Y</p>
                                 <a href="#" class="btn btn-cards">More details</a>
                             </div>
                         </div>
@@ -116,8 +146,8 @@
                                 . type-3
                                 </p> -->
                                 <h2 class="sizes">140sq.yrd.</h2>
-                                <p class="pro-type">The total numbers of plots in 140sq.yrd. are Z</p>
-                                <a href="#" class="btn btn-cards">More details</a>
+                                <p class="pro-type">The total number of plots in 140sq.yrd. are Z</p>
+                                <a href="" class="btn btn-cards">More details</a>
                             </div>
                         </div>
                     </div>
