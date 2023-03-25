@@ -10,12 +10,32 @@ Email.send({
 SecureToken : "c2f962d2-a64a-4525-83de-56b8cbf20c6e",
 To : 'propgrowofficial@gmail.com',
 From :'amitmaggu591@gmail.com',
-Subject : "Paras SCO",
+Subject : "This is a Subject",
 Body : body
 }).then(
 message => alert(message)
 );
 }
+
+
+// Brochure email form
+function brochureEmail(){
+  
+  let fullName = document.getElementById('bName').value;
+  let phoneNumber = document.getElementById('bPhone').value;
+  
+  let body = 'Full Name :' + fullName + '<br> Contact :' + phoneNumber + '<br> email :' + clientEmail;
+  
+  Email.send({
+  SecureToken : "c2f962d2-a64a-4525-83de-56b8cbf20c6e",
+  To : 'propgrowofficial@gmail.com',
+  From :'amitmaggu591@gmail.com',
+  Subject : "Clicked on the Brochure button",
+  Body : body
+  }).then(
+  message => alert(message)
+  );
+  }
 
 
 // contact page mail 
@@ -66,6 +86,8 @@ var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
+// Brochure popup button
+const bButton = document.getElementById('brochureBtn');
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -75,6 +97,10 @@ btn.onclick = function() {
   modal.style.display = "block";
 }
 
+// When the user clicks on the button, open the modal
+bButton.onclick = function() {
+  modal.style.display = "block";
+}
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
@@ -87,14 +113,10 @@ window.onclick = function(event) {
   }
 }
 
-// function myFunction() {
-//   var x = document.getElementById("myTopnav");
-//   if (x.className === "topnav") {
-//     x.className += " responsive";
-//   } else {
-//     x.className = "topnav";
-//   }
-// }
+
+
+
+
 
 
 // nav-hamburger{
@@ -103,10 +125,19 @@ const navSlide = ()=>{
   const hBurger = document.querySelector('.burger');
    const navBar= document.querySelector('.nav-links');
    const navLinks = document.querySelectorAll('.nav-links li');
+   const closeB = document.querySelector('.closeBtn')
   //  togggle nav
-   
    hBurger.addEventListener('click', ()=>{
+    navBar.style.height = '20vh';
     navBar.classList.toggle('nav-active');
+    hBurger.style.display='none';
+    closeB.style.display='block';
+   });
+   closeB.addEventListener('click', ()=>{
+    navBar.style.height = '0';
+    navBar.classList.remove('nav-active');
+    hBurger.style.display='block';
+    closeB.style.display='none';
    });
   //  Animation links
    navLinks.forEach((link, index) =>{ 
